@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2? family = Noto + Sans + Mono: wght @ 200; 300; 400; 500; 600; 600; 700; 800; 900 & display = swap");
+
+:root {
+  --fonte: #322826;
+  --fundo: #dfe4e3;
+  --detail: #e83948;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto + Sans + Mono", sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--fundo);
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  position: relative;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--fonte);
+  animation: left-in 0.5s ease-in forwards;
+  animation-delay: 0ms;
+}
+header .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+header .imgBox img {
+  max-width: 340;
+  animation: right-in 0.5s ease-in forwards;
+  animation-delay: 1ms;
+  opacity: 1;
+}
+/* corpo */
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 0;
+  opacity: 1;
+}
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+}
+.content .textBox h2 {
+  color: var(--fonte);
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.content .textBox p {
+    margin: 0;
+    text-indent: 3ch
+}
+.content .textBox p span {
+  color: var(--detail);
+  font-size: 0.8em;
+  font-weight: 100;
+}
+/* redes sociais */
+.sci {
+  position: absolute;
+  bottom: 75px;
+  left: 150px;
+  display: flex;
+  animation: left-in 1s ease-in forwards;
+  animation-delay: 0;
+  opacity: 1;
+}
+.sci li {
+  list-style: none;
+}
+/* redes sociais */
+.sci li a {
+  text-decoration: none;
+  color: var(--fonte);
+  margin-right: 30px;
+  font-size: 0.9em;
+}
+/* quando passa o mouse por cima */
+.sci li a:hover {
+  color: var(--detail);
+}
+/* circulo */
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--detail);
+  clip-path: circle(600px at right 800px);
+  animation: fade-in 0.5s ease-in forwards;
+  animation-delay: 0;
+  opacity: 1;
+}
+/* animação de aparecer */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* animação da esquerda -> */
+@keyframes left-in {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/* animação da direita <- */
+@keyframes right-in {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
